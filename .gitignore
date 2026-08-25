@@ -1,0 +1,6 @@
+data/ 
+models/ 
+*.pth 
+*.tar.gz 
+__pycache__/ 
+*.png 

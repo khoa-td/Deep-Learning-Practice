@@ -29,7 +29,6 @@ X_valid = scaler.transform(X_valid)
 X_test = scaler.transform(X_test)
 
 
-#Chuyen sang du lieu cua PyTorch:
 X_train = torch.FloatTensor(X_train)
 X_valid = torch.FloatTensor(X_valid)
 X_test = torch.FloatTensor(X_test)
@@ -38,7 +37,6 @@ y_valid = torch.FloatTensor(y_valid).reshape(-1, 1)
 y_test = torch.FloatTensor(y_test).reshape(-1, 1)
 
 
-#chay neural networks cua deeplearning:
 class Model(nn.Module):
     def __init__(self, input_dim):
         super().__init__()
@@ -57,7 +55,6 @@ class Model(nn.Module):
 
         return x
 
-#train model vua tao:
 model = Model(input_dim = X_train.shape[1])
 criterion = nn.BCELoss()
 optimizer = torch.optim.Adam(model.parameters(), lr = 0.001)
